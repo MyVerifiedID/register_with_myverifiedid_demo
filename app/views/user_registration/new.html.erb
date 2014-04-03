@@ -1,0 +1,30 @@
+<h2>Registration using my Verified Id details</h2>
+
+<%= form_for(User.new, :url => {:controller => "user_registration", :action => "create"},:method => "post") do |f| %>
+
+	<div><%= f.label :first_name %><br />
+  <%= f.text_field :first_name, :value => @user_details["first_name"] %></div>
+
+  <div><%= f.label :last_name %><br />
+  <%= f.text_field :last_name, :value => @user_details["last_name"] %></div>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, :value => @user_details["email"], :autofocus => true %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.label :gender %><br />
+  <%= f.text_field :gender, :value => @user_details["gender"] %></div>
+
+	<div><%= f.label :country %><br />
+  <%= f.text_field :country, :value => @user_details["country"] %></div>
+
+  <%= f.hidden_field :provider, :value => @provider %>
+  <%= f.hidden_field :uid, :value => @user_details["uid"] %>
+
+  <div><%= f.submit "Register Account" %></div>
+<% end %>
