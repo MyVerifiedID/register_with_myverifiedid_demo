@@ -1,49 +1,30 @@
 # Myverifiedid
-   This gem provides login with MYVERIFIEDID.
-   Following are the details to configure this gem with rails application.
+   This demo code provides register with or login with MYVERIFIEDID.
    Feel free to contact us support@myverifiedid.com for any configuration related issues.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+  Execute:
+    $ bundle install
 
-    gem 'omniauth-oauth2'
-    
-    gem 'myverifiedid', :git => "git@github.com:didiergrossemy/myverifiedid-oauth2.git"
+  and
 
-And then execute:
-
-    $ bundle
+    $ rails server
 
 
 ## Usage
-Step1 : Create one initializer
+Step1 : Update the api details in the file
 
-  config/initializers/omniauth.rb
+  config/application.yml
 
-  Rails.application.config.middleware.use OmniAuth::Builder do
-    provider "myverifiedid" , ENV["OAUTH_ID"], ENV["OAUTH_SECRET"], :scope => "email"
-  end
+  OAUTH_ID: "oauth id details"
+  OAUTH_SECRET: "oauth secret details"
 
   To get OAUTH_ID AND OAUTH_SECRET environment variables, please contact to support@myverifiedid.com
   provide following details:
   website url: 
   and your contact details or 
   open this https://myverifiedid.com/contacts snad send your request.
-
-Step2: Add routes
-  
-  In your config/routes.rb
-  
-  match '/auth/:provider/callback' => 'session#create'
-    match 'auth/failure', to: redirect('/')
-
-Step3: Add a link to login
-  
-  <%= link_to "Login with MYVERIFIEDID", "/auth/myverifiedid" %>
-  
-
-
 
 ## Contributing
 
