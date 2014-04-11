@@ -1,6 +1,5 @@
-GIT
-  remote: git@github.com:didiergrossemy/myverifiedid-oauth2.git
-  revision: fa9a5d4a9ca59a407409f0d09c50a80155c2275b
+PATH
+  remote: /home/kodandapani/projects/myverifiedid-oauth2
   specs:
     myverifiedid (0.0.1)
 
