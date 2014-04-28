@@ -28,8 +28,8 @@ gem 'figaro'
 
 gem 'omniauth-oauth2'
 
-gem 'myverifiedid', :path => "/home/kodandapani/projects/myverifiedid-oauth2"
-#gem 'myverifiedid', :git => "git@github.com:didiergrossemy/myverifiedid-oauth2.git"
+#gem 'myverifiedid', :path => "/home/kodandapani/projects/myverifiedid-oauth2"
+gem 'myverifiedid', :git => "git@github.com:didiergrossemy/myverifiedid-oauth2.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
